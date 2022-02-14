@@ -1,0 +1,9 @@
+<h1>Rails Airbnb Flats</h1>
+<p>List o' flats:</p>
+
+<ul>
+<% @flats.each do |flat| %>
+  <li><%= flat['name'] %> - <%= "#{flat['price']} #{flat['priceCurrency']}" %> <%= link_to "View Here", flat_path(flat["id"]) %></li>
+
+<% end %>
+</ul>
